@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .counter {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+        text-align: center;
+        color: #28007D;
+        margin-bottom: 20px;
+    }
+    
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #28007D;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #1a0056;
+    }    
+</style>
+<body>
+    <div class="counter">
+        <h1>Contador con Bucle For</h1>
+        <button onclick="contar()">Contar</button>
+    </div>
+</body>
+<script>
+    function contar() {
+        // Obtener el número desde el usuario
+        const numero = parseInt(prompt("Ingrese un número para contar hasta él:"));
+    
+        // Verificar si el usuario ingresó un número válido
+        if (isNaN(numero)) {
+            alert("Por favor, ingrese un número válido.");
+            return;
+        }
+    
+        // Inicializar el contador
+        let resultado = "";
+    
+        // Usar un bucle "for" para contar hasta el número ingresado
+        for (let i = 1; i <= numero; i++) {
+            resultado += i + " ";
+        }
+    
+        // Mostrar el resultado
+        alert("Contando desde 1 hasta " + numero + ":\n" + resultado);
+    }    
+</script>
+</html>
